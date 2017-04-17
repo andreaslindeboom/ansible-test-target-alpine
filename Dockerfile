@@ -3,7 +3,7 @@ FROM alpine:3.5
 ENV SSH_USER=ansible
 ENV SSH_DIR=/home/$SSH_USER/.ssh
 
-RUN apk add --no-cache openssh && \
+RUN apk add --no-cache openssh python && \
     ssh-keygen -A &&\
     addgroup $SSH_USER && \
     adduser $SSH_USER -S -s /bin/sh -G $SSH_USER && \
