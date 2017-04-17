@@ -14,5 +14,7 @@ services:
     volumes:
       - "./:/ansible"
     command: sh test.sh
+    depends_on:
+      - role-tester
 
 
