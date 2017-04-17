@@ -1,0 +1,18 @@
+language: bash
+
+sudo: required
+
+services:
+  - docker
+
+env:
+  global:
+    - ANSIBLE_VERSION=2.3.0.0
+    - AUTHORIZED_KEY=ansible.pub
+
+script_before:
+  - ssh-keygen -t rsa -P "" -f ansible
+
+script:
+  - docker-compose run test
+
