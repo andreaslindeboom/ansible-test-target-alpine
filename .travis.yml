@@ -14,5 +14,6 @@ script_before:
   - ssh-keygen -t rsa -P "" -f ansible
 
 script:
+  - docker build -t lindeboomio/ansible-role-tester .
   - docker-compose run test
 

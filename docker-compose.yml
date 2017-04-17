@@ -3,7 +3,7 @@ version: "2"
 services:
   role-tester:
     container_name: role-tester
-    image: role-tester
+    image: lindeboomio/ansible-role-tester
     ports:
       - "2222:22"
     environment:
