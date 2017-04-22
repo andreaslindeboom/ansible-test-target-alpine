@@ -17,3 +17,6 @@ script:
   - export AUTHORIZED_KEY=$(cat test/ansible.pub)
   - docker-compose run test
 
+after_script:
+  - rm ansible ansible.pub
+
