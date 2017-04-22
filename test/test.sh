@@ -1,6 +1,6 @@
 #!/bin/bash
 ansible-playbook test.yml \
-    -i role-tester, \
+    -i test-target, \
     --ssh-extra-args="-p 2222" \
     -u ansible \
-    --key-file=ansible \
+    --key-file=ansible
