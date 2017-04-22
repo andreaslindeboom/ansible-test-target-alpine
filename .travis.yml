@@ -15,7 +15,7 @@ before_script:
 script:
   - docker build -t lindeboomio/ansible-test-target-alpine .
   - export AUTHORIZED_KEY=$(cat test/ansible.pub)
-  - docker-compose run test
+  - docker-compose -f test/docker-compose.yml run test
 
 after_script:
   - rm ansible ansible.pub
