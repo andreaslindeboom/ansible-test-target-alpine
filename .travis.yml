@@ -10,7 +10,7 @@ env:
     - ANSIBLE_VERSION=2.3.0.0
 
 before_script:
-  - ssh-keygen -t rsa -P "" -f ansible
+  - ssh-keygen -t rsa -P "" -f test/ansible
 
 script:
   - docker build -t lindeboomio/ansible-test-target-alpine .
