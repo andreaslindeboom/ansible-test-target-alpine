@@ -8,12 +8,12 @@ services:
 env:
   global:
     - ANSIBLE_VERSION=2.3.0.0
-    - AUTHORIZED_KEY=ansible.pub
 
 before_script:
   - ssh-keygen -t rsa -P "" -f ansible
 
 script:
   - docker build -t lindeboomio/ansible-test-target-alpine .
+  - export AUTHORIZED_KEY=$(cat test/ansible.pub)
   - docker-compose run test
 
