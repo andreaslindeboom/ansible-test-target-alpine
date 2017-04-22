@@ -3,7 +3,7 @@ version: "2"
 services:
   role-tester:
     container_name: role-tester
-    image: lindeboomio/ansible-role-tester
+    image: lindeboomio/ansible-test-target-alpine
     ports:
       - "2222:22"
     environment:
