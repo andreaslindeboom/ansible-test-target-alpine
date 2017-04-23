@@ -18,5 +18,5 @@ script:
   - ./build.sh
 
 after_script:
-  - rm ansible ansible.pub
+  - rm test/ansible test/ansible.pub
 
