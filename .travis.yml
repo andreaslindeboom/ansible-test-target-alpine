@@ -7,15 +7,15 @@ services:
 
 env:
   global:
+    - REPOSITORY_NAME=lindeboomio/ansible-test-target-alpine
+    - DEFAULT_TAG=development
     - ANSIBLE_VERSION=2.3.0.0
 
 before_script:
   - ssh-keygen -t rsa -P "" -f test/ansible
 
 script:
-  - docker build -t lindeboomio/ansible-test-target-alpine .
-  - export AUTHORIZED_KEY=$(cat test/ansible.pub)
-  - docker-compose -f test/docker-compose.yml run test
+  - ./build.sh
 
 after_script:
   - rm ansible ansible.pub
