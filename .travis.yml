@@ -16,7 +16,3 @@ before_script:
 
 script:
   - ./build.sh
-
-after_script:
-  - rm test/ansible test/ansible.pub
-
