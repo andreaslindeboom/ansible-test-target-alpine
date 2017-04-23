@@ -3,7 +3,7 @@ version: "2"
 services:
   test-target:
     container_name: test-target
-    image: lindeboomio/ansible-test-target-alpine
+    image: lindeboomio/ansible-test-target-alpine:$DEFAULT_TAG
     ports:
       - "2222:22"
     environment:
